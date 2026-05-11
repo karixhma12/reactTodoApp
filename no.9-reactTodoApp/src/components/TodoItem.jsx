@@ -1,9 +1,9 @@
 
 
-function TodoItem(){
+function TodoItem({key,todo}){
     return(
         <div>
-            Todo Item
+            {todo.text}
         </div>
     )
 }
