@@ -10,9 +10,22 @@ function App(){
     const newTodo = {id:Date.now(), text:text, done:false};
     setTodos([...todos,newTodo]);
   }
+  function deleteTodo(id){
+    const newTodos = todos.filter((todo)=>{
+      if(todo.id===id){
+        return false;
+      }
+      else{
+        return true;
+      }
+    })
+
+    setTodos(newTodos);
+
+  }
   return(
   <>
-    <TodoList list={todos}/>
+    <TodoList list={todos} deleteTodo={deleteTodo}/>
     <TodoInput addTodo={addTodo}/>
   </>
   )
