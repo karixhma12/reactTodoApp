@@ -21,11 +21,24 @@ function App(){
     })
 
     setTodos(newTodos);
-
   }
+
+  function toggleTodo(id){
+    const newTodo = todos.map((todo)=>{
+      if(todo.id===id){
+        return{...todo , done:!todo.done};
+      }
+      else{
+        return todo;
+      }
+    })
+    setTodos(newTodo);
+  }
+
+
   return(
   <>
-    <TodoList list={todos} deleteTodo={deleteTodo}/>
+    <TodoList list={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
     <TodoInput addTodo={addTodo}/>
   </>
   )
