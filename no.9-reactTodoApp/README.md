@@ -1,18 +1,25 @@
-# React + Vite
+# My Todo App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A colorful and functional Todo app built with React as my first mini-project.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://karixhma12.github.io/reactTodoApp/](https://karixhma12.github.io/reactTodoApp/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- ✅ Add, edit, delete todos
+- ✅ Mark todos as done with a checkbox and strikethrough
+- ✅ Press Enter to add or save todos
+- ✅ Todos persist after refresh (localStorage)
+- ✅ Colorful, responsive UI
 
-## React Compiler
+## Tech Stack
+- React (useState, useEffect)
+- Plain CSS
+- Vite
+- GitHub Pages (deployment)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I learned
+- Component structure and props
+- Lifting state up
+- Controlled inputs
+- Array methods (.map, .filter) for state updates
+- localStorage with useEffect
