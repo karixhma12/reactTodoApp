@@ -35,10 +35,22 @@ function App(){
     setTodos(newTodo);
   }
 
+  function editTodo(id, text){
+      const newTodo = todos.map(todo=>{
+          if(id===todo.id){
+            return {...todo, text: text};
+          }
+          else{
+            return todo;
+          }
+      })
+      setTodos(newTodo);
+  }
+
 
   return(
   <>
-    <TodoList list={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
+    <TodoList list={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo}/>
     <TodoInput addTodo={addTodo}/>
   </>
   )
