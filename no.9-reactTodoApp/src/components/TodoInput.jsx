@@ -4,8 +4,8 @@ function TodoInput({addTodo}){
     const [todoText,setTodoText] = useState("");
     return(
         <div>
-            <input value={todoText} type="text" placeholder="enter your todo..." onChange={e=>{setTodoText(e.target.value)}}></input>
-            <button onClick={()=>{addTodo(todoText);setTodoText("");}} >Add Todo</button>
+            <input value={todoText} type="text" placeholder="enter your todo..." onChange={e=>{setTodoText(e.target.value)}} onKeyDown={e=>{if(e.key==="Enter"){addTodo(todoText);setTodoText("");}}}></input>
+            <button onClick={()=>{addTodo(todoText);setTodoText("");}}>Add Todo</button>
         </div>
     )
 }

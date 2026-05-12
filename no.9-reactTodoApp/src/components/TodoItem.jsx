@@ -10,7 +10,7 @@ function TodoItem({todo, deleteTodo,toggleTodo,editTodo}){
         <div>
             {isEditing ? (
                     <>
-                        <input value={editText} type="text" onChange={e=>setEditText(e.target.value)}></input>
+                        <input value={editText} type="text" onChange={e=>setEditText(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"){editTodo(todo.id,editText);setIsEditing(false);}}}></input>
                         <button onClick={()=>{editTodo(todo.id, editText) ; setIsEditing(false);}}> Save </button>
                         <button onClick={()=>setIsEditing(false)}> Cancel </button>
                     </>
