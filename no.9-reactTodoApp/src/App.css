@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb, #f5576c, #4facfe);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app{
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 500px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.app-title{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.todo-input{
+  display:flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.todo-input__field{
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #f093fb;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.todo-input__filed:focus{
+  border-color: #f5576c;
+}
+
+.todo-input__btn{
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.todo-input__btn:hover{
+  opacity: 0.9;
+}
+
+.todo-item{
+  display: flex;
+  align-items: center;
+  gap: 0.75 rem;
+  padding: 0.75 rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #fdf0ff;
+  border-radius: 10px;
+}
+
+.todo-item__text{
+  flex: 1;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.todo-item__btn{
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.todo-item__btn--delete{
+  background: #ff6b6b;
+  color: white;
+  margin-left: auto;
+}
+
+.todo-item__btn--edit{
+  background: #4facfe;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.todo-item__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f093fb;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.todo-item__checkbox:checked {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  border-color: #f5576c;
+}
+
+.todo-item__checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: -1px;
+  left: 2px;
+}

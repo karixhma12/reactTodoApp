@@ -10,6 +10,7 @@ function App(){
     const saved = localStorage.getItem("todos");
     return saved ? JSON.parse(saved) : [];
   })
+
   function addTodo(text){
     const newTodo = {id:Date.now(), text:text, done:false};
     setTodos([...todos,newTodo]);
@@ -58,10 +59,11 @@ function App(){
 
 
   return(
-  <>
+  <div className="app">
+    <h1 className="app-title">My Todo App </h1>
     <TodoList list={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo}/>
     <TodoInput addTodo={addTodo}/>
-  </>
+  </div>
   )
 }
 

@@ -16,13 +16,13 @@ function TodoItem({todo, deleteTodo,toggleTodo,editTodo}){
                     </>
                 ) :
                 (
-                    <div style={{display:"flex"}}>
-                        <input type="checkbox" checked={todo.done} onChange={()=>toggleTodo(todo.id)}/>
-                        <div style={{textDecoration: todo.done ? "line-through" : "none"}}>
+                    <div className="todo-item">
+                        <input className="todo-item__checkbox" type="checkbox" checked={todo.done} onChange={()=>toggleTodo(todo.id)}/>
+                        <span className="todo-item__text" style={{textDecoration: todo.done ? "line-through" : "none" }}>
                             {todo.text}
-                        </div>
-                        <button onClick={()=>deleteTodo(todo.id)}> Delete </button>
-                        <button onClick={()=>{setIsEditing(true)}}> Edit </button>
+                        </span>
+                        <button className="todo-item__btn todo-item__btn--delete" onClick={()=>deleteTodo(todo.id)}> Delete </button>
+                        <button className="todo-item__btn todo-item__btn--edit" onClick={()=>{setIsEditing(true)}}> Edit </button>
                     </div>
                 )
             }
